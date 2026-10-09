@@ -1,42 +1,44 @@
-# Superstore Sales Analysis — Power BI
+# 🛒 Superstore Sales Analysis — Power BI
 
-An interactive sales report created with Power BI and the Sample Superstore dataset to explore sales, profit, quantity and discounts.
+An interactive Power BI report for analysing sales, profit, quantity and discounts using the Sample Superstore dataset.
 
-## Dashboard Preview
+## 📊 Dashboard Preview
 
-![Superstore Sales Dashboard](DASHBOARD.png)
+![Superstore Sales Dashboard](./DASHBOARD.png)
 
-## Project Overview
+## 📌 Project Overview
 
-This project covers data preparation in Power Query, KPI cards, sales charts, slicers, filters and visual interactions.
+This project demonstrates data preparation, KPI reporting, visual analysis and interactive filtering in Power BI.
 
 The report contains two pages:
-- **Sales Overview:** Interactive dashboard.
-- **Order Details:** A table for exploring order-level information.
+- **Sales Overview:** Interactive sales dashboard.
+- **Order Details:** Detailed order information in a table.
 
-## Tools Used
+## 🛠️ Tools Used
 
 - Power BI Desktop
 - Power Query
 - Sample Superstore CSV dataset
+- GitHub for project documentation
 
-## Data Preparation
+## 🧹 Data Preparation
 
-The original dataset contains 9,994 rows and 21 columns.
+The original dataset contains **9,994 rows and 21 columns**.
 
-The following transformations were applied:
+Transformations applied in Power Query:
 - Corrected column data types.
 - Renamed customer, customer segment and shipping mode columns.
-- Filtered customer segments to Consumer and Corporate.
+- Kept Consumer and Corporate customer segments.
 - Removed Row ID, Country and Postal Code.
-- Duplicated Order ID and split it into order code and order reference.
-- Set the split columns to Text.
+- Duplicated Order ID.
+- Split the duplicated Order ID into order code and order reference.
+- Renamed the split columns and set their data types to Text.
+
+The query contains **eight transformation steps**, excluding Source and Promoted Headers.
 
 Column Quality, Column Distribution and Column Profile were used to inspect the data.
 
-The query contains eight transformation steps, excluding Source and Promoted Headers.
-
-## Key Performance Indicators
+## 🎯 Key Performance Indicators
 
 | KPI | Calculation |
 |---|---|
@@ -45,69 +47,77 @@ The query contains eight transformation steps, excluding Source and Promoted Hea
 | Total Quantity | Sum of Quantity |
 | Average Discount | Average of Discount |
 
-Discount is displayed as a decimal: 0.16 represents approximately 16%.
+Average Discount is displayed as a decimal: **0.16 represents approximately 16%**.
 
-## Dashboard Charts
+## 📈 Dashboard Charts
 
-- **Sales by Category:** Compares category sales in descending order.
-- **Profit by Region:** Compares regional profit in descending order.
-- **Top 5 Sub-Categories by Sales:** Displays the five highest-selling sub-categories within the current filter context.
+- **Sales by Category:** Category sales sorted in descending order.
+- **Profit by Region:** Regional profit sorted in descending order.
+- **Top 5 Sub-Categories by Sales:** Highest-selling sub-categories within the current filter context.
 
-## Slicers and Filters
+Data labels make the values easy to compare.
 
-- Region slicer
-- Category slicer
-- Sales Overview page filter: Standard Class and Second Class shipping
-- Top N visual filter: Top 5 Sub-Categories by Sum of Sales
+## 🎛️ Slicers and Filters
 
-The shipping filter applies only to Sales Overview. Order Details can therefore show different totals.
+- **Region slicer:** Explore regional performance.
+- **Category slicer:** Explore product categories.
+- **Page filter:** Standard Class and Second Class shipping.
+- **Top N filter:** Top 5 Sub-Categories by Sum of Sales.
 
-## Visual Interactions
+The shipping filter applies only to Sales Overview. Totals on Order Details can therefore differ.
 
-The following interactions were tested:
-- Selecting a category bar filters Profit by Region.
-- Selecting a region bar filters Top 5 Sub-Categories.
-- Selecting a sub-category bar filters Sales by Category.
+## 🔄 Visual Interactions
 
-Chart selections and slicers also update the KPI cards.
+The following chart interactions were tested:
+- Category selection filters Profit by Region.
+- Region selection filters Top 5 Sub-Categories.
+- Sub-Category selection filters Sales by Category.
 
-## Dashboard Insights
+Slicers and chart selections also update the KPI cards.
+
+## 💡 Dashboard Insights
 
 With all regions and categories selected and the shipping filter applied:
-- Total Sales: **1,496,802.59**
-- Total Profit: **178,567.48**
-- Total Quantity: **24,936**
-- Average Discount: **approximately 0.16**
-- Technology has the highest category sales.
-- West has the highest regional profit.
-- Chairs leads the Top 5 Sub-Categories by Sales.
 
-These results change when slicers or chart selections are applied.
+| Metric | Value |
+|---|---:|
+| Total Sales | 1,496,802.59 |
+| Total Profit | 178,567.48 |
+| Total Quantity | 24,936 |
+| Average Discount | Approximately 0.16 |
 
-## Design
+- **Technology** has the highest category sales.
+- **West** has the highest regional profit.
+- **Chairs** leads the Top 5 Sub-Categories by Sales.
 
-The report uses a dark charcoal background, white visual panels, red chart accents and charcoal KPI values.
+Results change when slicers or chart selections are applied.
+
+## 🎨 Report Design
+
+- Dark charcoal canvas
+- White cards and chart panels
+- Red chart accents and visual titles
+- Charcoal KPI values
+- Left-side slicers
+- Aligned visuals in a 16:9 layout
 
 The dark background is a design variation from the assignment's specified light-grey background.
 
-## Repository Contents
+## 📂 Repository Contents
 
-- superstore-sales overview.pbix
-- sample-superstore.csv
-- outputs
-- Project documentation (README.md)
+- Power BI report — `.pbix`
+- Original Superstore dataset — `.csv`
+- Dashboard preview — `DASHBOARD.png`
+- Order Details screenshots
+- Project documentation — `README.md`
 
+## 🚀 How to Use
 
- ## author⭐
- 
-  # rakesh
-
-## How to Use
-
-1. Download the PBIX file and CSV dataset.
-2. Open the PBIX in Power BI Desktop.
-3. Explore the report using Region and Category slicers.
-4. Click chart bars to filter related visuals.
+1. Download the Power BI report and CSV dataset.
+2. Open the PBIX file in Power BI Desktop.
+3. Use Region and Category slicers to explore the dashboard.
+4. Click a chart bar to filter related charts and KPI cards.
 5. Click the selected bar again to clear the selection.
+6. Open Order Details to view detailed records.
 
-To refresh the data, update the CSV source path in Power Query to its location on your computer.
+For data refresh, update the CSV source path in Power Query to the file's location on your computer.
