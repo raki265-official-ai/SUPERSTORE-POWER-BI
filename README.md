@@ -4,7 +4,7 @@ An interactive Power BI report for analysing sales, profit, quantity and discoun
 
 ## 📊 Dashboard Preview
 
-![Superstore Sales Dashboard](./DASHBOARD.png)
+![Superstore Sales Dashboard](./dashboard%20preview/DASHBOARD.png)
 
 ## 📌 Project Overview
 
